@@ -59,3 +59,12 @@ export EDITOR="$VISUAL"' >> ~/.zshrc
 
 git config --global user.name "Fábio Ferreira"
 git config --global user.email ffcfpten@gmail.com
+
+echo "Installing git-cz"
+npm install -g git-cz
+echo "✅ Installed git-cz"
+
+echo "Installing yarn"
+npm install --global yarn
+corepack enable
+echo "✅ Installed yarn"
