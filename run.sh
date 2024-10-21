@@ -47,9 +47,15 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc' >> ~/.zshrc
 echo "✅ Installed and configured NVM"
 
-nvm install lts
+nvm install --lts
 echo "✅ Installed default node version"
 
 brew install git
+git config --global core.editor "nano"
 echo "✅ Installed git"
 
+echo 'export VISUAL=nano
+export EDITOR="$VISUAL"' >> ~/.zshrc
+
+git config --global user.name "Fábio Ferreira"
+git config --global user.email ffcfpten@gmail.com
