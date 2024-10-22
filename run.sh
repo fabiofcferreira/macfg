@@ -68,3 +68,16 @@ echo "Installing yarn"
 npm install --global yarn
 corepack enable
 echo "✅ Installed yarn"
+
+echo "Adding useful git shortcuts"
+echo '# Custom Git commands' >> ~/.zprofile
+echo 'alias l="ls -lAh"
+alias gpull="git pull;"
+alias gpullupdate="git pull; yarn;"
+alias gbranch="git branch;"
+alias gdone="git checkout master || git checkout main; git branch -D @{-1};"
+alias gpr="git checkout -b "$@""
+alias ggo="gitcz"
+alias gstatus="git status"
+alias grevlast="git reset HEAD~1"
+alias gcatchup="git checkout master || git checkout main; gpullupdate; git checkout -"' >> ~/.zshrc
